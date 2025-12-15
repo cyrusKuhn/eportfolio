@@ -119,6 +119,11 @@ a:hover {
     margin-top: 1rem;
 }
 
+.main > div:nth-child(even) .strange-skies,
+.main > div:nth-child(even) .spectacular-stars {
+    flex-direction: row-reverse;
+}
+
 .strange-skies img,
 .spectacular-stars img {
     width: 220px;
