@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>E-Portfolio</title>
 </head>
 <body>
@@ -9,30 +10,131 @@
     <h1>E-Portfolio</h1>
     <p>Cyrus Kuhn</p>
 
-    <div class="sidebar">
-        <a href="#Research">Research</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Work_Experience">Work Experience</a>
-        <a href="#Performances">Performances</a>
-        <a href="#Compositions">Compositions</a>
-        <a href="#Courses">Courses</a>
+    <div class="topbar">
+        <a href="#research-header">Research</a>
+        <a href="#projects-header">Projects</a>
+        <a href="#work-experience-header">Work Experience</a>
+        <a href="#performances-header">Performances</a>
+        <a href="#compositions-header">Compositions</a>
+        <a href="#courses-header">Courses</a>
     </div>
 
     <div class="main">
         <div class="research">
-            <h2>Research</h2>
+            <h2 id="research-header">Research</h2>
             <p>Conference-Presented Research Papers</p>
-            <hr>
         </div>
 
         <div class="projects">
-            <h2>Projects</h2>
+            <h2 id="projects-header">Projects</h2>
             <p>Programming and Engineering Projects</p>
-            <hr>
+
+            <div>
+            <h3>Kardavus</h3>
+            <p>
+                Kardavus is a project for implementing many
+                procedural generation techniques into creating a 
+                simulated environment similar to the videogame Spore.
+                Ultimately, the simulation will be able to demonstrate 
+                the evolution of civilizations across the Kardashev 
+                scale. 
+            </p>
+            <p>
+                <a href="https://github.com/cyrusKuhn/Kardavus">Access Here</a>
+            </p>
+            </div>
+
+            <div>
+            <h3>Atomic Transistor Simulation</h3>
+            <p>
+                This simulation will be used to test different transistor
+                structures and materials using analytical and numerical 
+                analysis with fundamental physics such as quantum 
+                mechanics and molecular dynamics. Ideally, this project 
+                will be useful outside of transistor applications, 
+                though the initial scope will be less broad. 
+            </p>
+            </div>
+        </div>
+
+        <div class="compositions">
+            <h2 id="compositions-header">Compositions</h2>
+            <p>Pieces of music composed by me.</p>
+
+            <div>
+            <h3>Our World</h3>
+            <p>
+                This composition is a series of several keyboard songs 
+                that came to mind through observation of the world and 
+                curiosity for the little details within it. Despite the 
+                complex systems, views, and emotions that natural 
+                phenomena can create, these songs seek to show these 
+                simply. 
+            </p>
+
+            <div>
+            <h4>Strange Skies</h4>
+            <p>
+                The sky holds many secrets. Some days, it is completely 
+                clear out, showing a vibrant blue seen nowhere else. 
+                Other days, intense storms can be brutal to those outside, 
+                but create peace for those who harbor indoors. 
+            </p>
+            <div class="strange-skies">
+                <img src="Compositions/Strange Skies.png" id="strangeSkiesPreview">
+                <audio src="Compositions/Strange Skies.mp3" id="strangeSkiesTrack"></audio>
+                <script>
+                    const strangeSkiesPreview = document.getElementById("strangeSkiesPreview");
+                    const strangeSkiesTrack = document.getElementById("strangeSkiesTrack");
+
+                    strangeSkiesPreview.addEventListener("click", () => {
+                        if (strangeSkiesTrack.paused) {
+                            strangeSkiesTrack.play();
+                        } else {
+                            strangeSkiesTrack.pause();
+                        }
+                    });
+                </script>
+            </div>
+            </div>
+
+            <div>
+            <h4>Sparse Seas</h4>
+            <p>
+                The waves gently lap at the shore, each bringing new 
+                life to the beach and taking with it the shells of 
+                past creatures. 
+            </p>
+            </div>
+
+            <div>
+            <h4>Spectacular Stars</h4>
+            <p>
+                Sometimes, there are no words for the sights available 
+                to us. All that can be found is a gentle peace. 
+            </p>
+            <div class="spectacular-stars">
+                <img src="Compositions/Spectacular Stars.png" id="spectacularStarsPreview">
+                <audio src="Compositions/Spectacular Stars.mp3" id="spectacularStarsTrack"></audio>
+                <script>
+                    const spectacularStarsPreview = document.getElementById("spectacularStarsPreview");
+                    const spectacularStarsTrack = document.getElementById("spectacularStarsTrack");
+
+                    spectacularStarsPreview.addEventListener("click", () => {
+                        if (spectacularStarsTrack.paused) {
+                            spectacularStarsTrack.play();
+                        } else {
+                            spectacularStarsTrackpause();
+                        }
+                    });
+                </script>
+            </div>
+            </div>
+            </div>
         </div>
 
         <div class="work-experience">
-            <h2>Work Experience</h2>
+            <h2 id="work-experience-header">Work Experience</h2>
             <p>Past Positions</p>
 
             <br>
@@ -40,7 +142,7 @@
             <h3>Internships</h3>
 
             <h3>College Positions</h3>
-            <p>Positions held as a student at Bucknell University</p>
+            <p>Positions held as a student in University</p>
 
             <h4>Research Fellow</h4>
             <p>Department of Computer Science, SingChun Lee</p>
@@ -81,60 +183,16 @@
                 one-on-one support. Managing classroom logistics. 
                 Assisting with grading, feedback, and assessment. 
             </p>
-
-            <hr>
         </div>
 
         <div class="performances">
-            <h2>Performances</h2>
+            <h2 id="performances-header">Performances</h2>
             <p>Music Performance Experience</p>
-            <hr>
-        </div>
-
-        <div class="compositions">
-            <h2>Compositions</h2>
-            <p>Musical Compositions</p>
-
-            <br>
-
-            <h3>Our World</h3>
-            <p>
-                This composition is a series of several keyboard songs 
-                that came to mind through observation of the world and 
-                curiosity for the little details within it. Despite the 
-                complex systems, views, and emotions that natural 
-                phenomena can create, these songs seek to show these 
-                simply. 
-            </p>
-
-            <h4>Strange Skies</h4>
-            <p>
-                The sky holds many secrets. Some days, it is completely 
-                clear out, showing a vibrant blue seen nowhere else. 
-                Other days, intense storms can be brutal to those outside, 
-                but create peace for those who harbor indoors. 
-            </p>
-
-            <h4>Sparse Seas</h4>
-            <p>
-                The waves gently lap at the shore, each bringing new 
-                life to the beach and taking with it the shells of 
-                past creatures. 
-            </p>
-
-            <h4>Spectacular Stars</h4>
-            <p>
-                Sometimes, there are no words for the sights available 
-                to us. All that can be found is a gentle peace. 
-            </p>
-
-            <hr>
         </div>
 
         <div class="courses">
-            <h2>Courses</h2>
+            <h2 id="courses-header">Courses</h2>
             <p>College Level Courses taken</p>
-            <hr>
         </div>
     </div>
 
