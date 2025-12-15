@@ -74,6 +74,7 @@ body > p {
 /* Even sections */
 .main > div:nth-child(even) {
     margin-left: auto;
+    text-align: right;
     background-color: #e0f2fe;
 }
 
